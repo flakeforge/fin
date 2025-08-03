@@ -1,0 +1,1 @@
+[{"projects":{"client":{"source":"apps/client"},"server":{"source":"apps/server"}},"configs":{".moon/tasks.yml":"2c6634ea06cc1e6fd720fe1168248de709f2dbc6",".moon/workspace.yml":"8a2880900e2448d98d5f8d5415fa7c66ef6a28ac","apps/client/moon.yml":"cbb75647376940f31403c157acf513a3ecd7ed0d"},"env":{"MOON_OUTPUT_STYLE":"","MOON_RETRY_COUNT":""},"inDocker":false,"version":"1.39.3"}]

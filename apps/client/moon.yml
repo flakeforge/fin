@@ -1,0 +1,28 @@
+$schema: https://moonrepo.dev/schemas/project.json
+
+layer: application
+language: typescript
+
+tags:
+  - client
+
+tasks:
+  build:
+    description: Build the client application
+    command: moon build
+
+  test:
+    description: Run client tests
+    command: moon test
+
+  lint:
+    description: Lint the client codebase
+    command: moon lint
+
+  format:
+    description: Format the client codebase
+    command: moon format
+
+  deploy:
+    description: Deploy the client application
+    command: moon deploy
