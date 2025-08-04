@@ -9,7 +9,7 @@ tags:
 tasks:
   build:
     description: Build the server application
-    command: "go build -o ./bin/server.exe ./cmd/app"
+    command: go build -o $projectRoot/bin/server.exe $projectRoot/cmd/app
     inputs:
       - cmd/**/*
     outputs:

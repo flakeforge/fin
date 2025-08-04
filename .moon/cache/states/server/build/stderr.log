@@ -1,3 +1,0 @@
-package build is not in std (C:\Program Files\Go\src\build)
-malformed import path "-o": leading dash
-stat D:\Projects\flake-forge\fin\apps\server\bin\server.exe: directory not found
