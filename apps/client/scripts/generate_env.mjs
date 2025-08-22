@@ -70,12 +70,27 @@ ANALYZER_MODE=static
  * @returns {Promise<void>}
  */
 async function copyFile(destination, content) {
-  const prompt = chalk.bgBlue('[COPY]')
+  let prompt = chalk.bgYellow('[SKIP]');
+
+  // Checks if the destination file already exists
+  try {
+    await fs.access(destination, fs.constants.F_OK)
+    console.info(
+      chalk.yellow(
+        `[SKIP] ${destination} already exists. Skipping copy operation.`,
+      ),
+    )
+    return
+  } catch (_error) {
+    // File does not exist, proceed with copy
+  }
 
   try {
+    prompt = chalk.bgBlue('[COPY]')
     await fs.copyFile(ENV_SOURCE, destination)
     console.info(prompt, chalk.blue(`${destination} created`))
 
+    prompt = chalk.bgGreen('[UPDATE]')
     await fs.writeFile(destination, content)
     console.info(prompt, chalk.blue(`${destination} updated`))
   } catch (error) {

@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "npm run generate:env",
+    "postinstall": "npm run generate:env",
     "generate:env": "node scripts/generate_env.mjs"
   },
   "keywords": [
