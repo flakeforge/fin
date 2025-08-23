@@ -7,7 +7,12 @@ tags:
   - server
 
 tasks:
-  start:
+  install:
+    description: Install Go dependencies
+    command: go mod tidy
+    inputs: [ "go.mod", "go.sum" ]
+
+  dev:
     description: Start the server application in development mode
     command: go run $projectRoot/cmd/app
 
@@ -28,8 +33,3 @@ tasks:
   format:
     description: Format the server codebase
     command: gofmt -w .
-
-  installDeps:
-    description: Install Go dependencies
-    command: go mod tidy
-    inputs: ["go.mod", "go.sum"]

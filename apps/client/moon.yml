@@ -7,7 +7,11 @@ tags:
   - client
 
 tasks:
-  start:
+  install:
+    description: Install dependencies for the client
+    command: pnpm install
+
+  dev:
     description: Start the client application in development mode
     command: npm run dev
 
