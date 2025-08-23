@@ -22,6 +22,7 @@ Telegram Mini Apps are an innovative way to engage with your audience, offering 
 
 ## Prerequisites
 - nodejs (>= 18.x.x)
+- golang (>= 1.23.x)
 - pnpm (>= 8.x.x)
 
 ## License

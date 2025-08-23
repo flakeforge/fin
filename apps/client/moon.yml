@@ -1,0 +1,28 @@
+$schema: https://moonrepo.dev/schemas/project.json
+
+layer: application
+language: typescript
+
+tags:
+  - client
+
+tasks:
+  install:
+    description: Install dependencies for the client
+    command: pnpm install
+
+  dev:
+    description: Start the client application in development mode
+    command: npm run dev
+
+  build:
+    description: Build the client application
+    command: npm run lint && npm run build
+
+  lint:
+    description: Lint the client codebase
+    command: npm run lint
+
+  deploy:
+    description: Deploy the client application
+    extends: build

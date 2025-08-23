@@ -1,0 +1,35 @@
+$schema: https://moonrepo.dev/schemas/project.json
+
+layer: application
+language: go
+
+tags:
+  - server
+
+tasks:
+  install:
+    description: Install Go dependencies
+    command: go mod tidy
+    inputs: [ "go.mod", "go.sum" ]
+
+  dev:
+    description: Start the server application in development mode
+    command: go run $projectRoot/cmd/app
+
+  build:
+    description: Build the server application
+    command: go build -o $projectRoot/bin/server $projectRoot/cmd/app
+    inputs: ["cmd/**/*"]
+    outputs: ["bin"]
+
+  test:
+    description: Run server tests
+    command: go test ./...
+
+  lint:
+    description: Lint the server codebase
+    command: golangci-lint run
+
+  format:
+    description: Format the server codebase
+    command: gofmt -w .

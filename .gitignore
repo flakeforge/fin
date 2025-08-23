@@ -1,27 +1,27 @@
-# dependencies
-/node_modules
+# Moon
+.moon/cache
 
-# testing
-/coverage
+# Cache
+.eslintcache
+.idea
+.npm
+.yarnclean
 
-# next.js
-/.next/
-/out/
+# Directories
+coverage/
+/build/
+cjs/
+dist/
+dts/
+esm/
+lib/
+mjs/
+tmp/
+umd/
+node_modules/
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# env files
-.env*
-!.env.example
-
-# vercel
-.vercel
-
-# typescript
+# Custom
+*.min.js
+*.map
 *.tsbuildinfo
-next-env.d.ts
+*.vsix
