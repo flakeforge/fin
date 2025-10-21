@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "moon :installDeps"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@moonrepo/cli": "^1.41.5"
+  }
 }
