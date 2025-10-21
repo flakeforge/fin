@@ -2,10 +2,12 @@
   "name": "fin",
   "version": "1.0.0",
   "private": false,
+  "author": {
+    "name": "FlakeForge team",
+    "email": "team@flakeforge.com",
+    "url": "https://.flakeforge.uz"
+  },
   "scripts": {
     "postinstall": "moon :installDeps"
-  },
-  "devDependencies": {
-    "@moonrepo/cli": "^1.41.5"
   }
 }
