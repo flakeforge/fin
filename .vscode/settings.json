@@ -6,5 +6,7 @@
     "*.css": "tailwindcss",
     "*.scss": "tailwindcss"
   },
-  "files.eol": "\r\n"
+  "files.eol": "\r\n",
+  "cSpell.words": ["joho"]
 }
+

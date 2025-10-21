@@ -1,19 +1,23 @@
 package main
 
 import (
-	"net/http"
+	"log"
 
-	"github.com/gin-gonic/gin"
+	"flakeforge/fin/config"
+	"flakeforge/fin/internal/app"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	println("Hello, Fin server!")
+  if err := godotenv.Load(); err !=  nil{
+    log.Printf("Warning: .env file not found: %v", err)
+  }
 
-	r := gin.Default()
-  r.GET("/", func (c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{
-      "message": "Hello, Fin server!",
-    })
-  })
-  r.Run() // listen and serve on
+  config, err := config.New()
+  if err != nil {
+    log.Printf("Warning: .env file not found: %v", err)
+  }
+
+  app.Run(config)
 }
